@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#user").click(function(){$("#userbar").toggle("fast")});var e;username=$("#username").html(),$("#chat").click(function(){return url="https://hkn.eecs.berkeley.edu:9090?nick="+username+"&channels=hkn&prompt=0",settings="status=no, toolbar=no, menubar=no, location=no, width=400, height=400",window.open(url,"chatwindow",settings),!1})});
