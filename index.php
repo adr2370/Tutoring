@@ -196,10 +196,10 @@ label.choice {
 			</li>
 			<li id="li_4" style="clear:both;">
 				<?php
-					$math=array("31A","31B","32A","32B","33A","33B","61");
-					$physics=array("1A","1B","1C","4AL","4BL");
-					$chem=array("20A","20B","20L","30A","30AL","30B");
-					$cs=array("31","32","33","35L","M51A");
+					$math=array("31A","31B","32A","32B","33A","33B");
+					$physics=array("1A","1B","1C");
+					$chem=array("20A","20B","20L");
+					$cs=array("31","32","33");
 					$counter=1;
 				?>
 				<label class="description" for="element_4">Math</label>
@@ -316,7 +316,7 @@ label.choice {
 				</span>
 			</li>
 			<li id="li_5">
-				<label class="description" for="others">Other Classes: (e.g. CS 111, MAE 101, Math 115A, etc.)</label>
+				<label class="description" for="others">Other Classes: (e.g. LS 2, LS 3, MAE 101, etc.)</label>
 				<div>
 					<input id="others" name="others" class="element text medium" type="text" value="" style="width:100%"/>
 				</div>
