@@ -82,6 +82,7 @@
 						echo "<div style='clear: both'></div>";
 						echo "<span class='small' style='font-style: italic'>Tutoring: </span>";
 						for($c=0;$c<count($classes);$c++) {
+							if(strlen($classes[$c])<=0) continue;
 							if($c>0) echo ", ";
 							echo $classes[$c];
 						}
@@ -107,7 +108,7 @@
 				for($j=0;$j<2-$len;$j++) $num="0".$num;
 				$allClasses[$i]=$num." ".$allClasses[$i];
 			}
-			sort($allClasses);
+			rsort($allClasses);
 			for($i=0;$i<count($allClasses);$i++) {
 				if($i>0) echo "<br>";
 				?>
