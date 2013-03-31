@@ -114,10 +114,15 @@
 			sort($allClasses);
 			$last="";
 			for($i=0;$i<count($allClasses);$i++) {
-				$exploded=explode(' ',$allClasses[$c]);
+				$exploded=explode(' ',$allClasses[$i]);
 				$which=$exploded[0];
-				if($which!=$last) echo $which."<br>";
-				else echo ", ";
+				if($which!=$last) {
+					echo $which."<br>";
+					$last=$which;
+				}
+				else {
+					echo ", ";
+				}
 				?>
 				<a href="#" class="'<?php echo preg_replace("/[^A-Za-z0-9]/", '', $allClasses[$i]); ?>'" onmouseover="highlight('<?php echo preg_replace("/[^A-Za-z0-9]/", '', $allClasses[$i]); ?>')" onmouseout="unhighlight('<?php echo preg_replace("/[^A-Za-z0-9]/", '', $allClasses[$i]); ?>')" onclick="return locklight('<?php echo preg_replace("/[^A-Za-z0-9]/", '', $allClasses[$i]); ?>')"><?php echo $exploded[1]; ?></a><?php } ?>
 	</div>
