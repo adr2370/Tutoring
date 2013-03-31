@@ -98,11 +98,19 @@
 </div>
 <div style="float: left; max-width: 18%; padding-left: 2%; padding-top: 70px; line-height: 1.75em;width: 20%;position: absolute;right: 0%;">
 	<div class="small" style="font-family: none;"><?php
+			for($i=0;$i<count($allClasses);$i++) {
+				$num=intval($classCounts[$allClasses[$i]]);
+				$num/=2;
+				$num=$num."";
+				$len=strlen($num);
+				for($j=0;$j<2-$len;$j++) $num="0".$num;
+				$allClasses[$i]=$num." ".$allClasses[$i];
+			}
 			sort($allClasses);
 			for($i=0;$i<count($allClasses);$i++) {
 				if($i>0) echo "<br>";
 				?>
-				<a href="#" class="'<?php echo preg_replace("/[^A-Za-z0-9]/", '', $allClasses[$i]); ?>'" onmouseover="highlight('<?php echo preg_replace("/[^A-Za-z0-9]/", '', $allClasses[$i]); ?>')" onmouseout="unhighlight('<?php echo preg_replace("/[^A-Za-z0-9]/", '', $allClasses[$i]); ?>')" onclick="return locklight('<?php echo preg_replace("/[^A-Za-z0-9]/", '', $allClasses[$i]); ?>')"><?php echo $allClasses[$i]." ".$classCounts[$allClasses[$i]]; ?></a><?php } ?>
+				<a href="#" class="'<?php echo preg_replace("/[^A-Za-z0-9]/", '', $allClasses[$i]); ?>'" onmouseover="highlight('<?php echo preg_replace("/[^A-Za-z0-9]/", '', $allClasses[$i]); ?>')" onmouseout="unhighlight('<?php echo preg_replace("/[^A-Za-z0-9]/", '', $allClasses[$i]); ?>')" onclick="return locklight('<?php echo preg_replace("/[^A-Za-z0-9]/", '', $allClasses[$i]); ?>')"><?php echo $allClasses[$i]; ?></a><?php } ?>
 	</div>
 </div>
   </div>
