@@ -118,7 +118,8 @@
 				$which="";
 				for($j=0;$j<count($exploded)-1;$j++) $which=$which.$exploded[$j]." ";
 				if($which!=$last) {
-					echo "<br>".$which."<br>";
+					if(count($exploded)>1)
+						echo "<br>".$which."<br>";
 					$last=$which;
 				}
 				else {
