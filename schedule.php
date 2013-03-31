@@ -67,7 +67,7 @@
 							}
 						}
 						echo "'>".$res['name']."</div>";
-						echo "<div id='boxtutor-".$res['id']."' class='tutorbox' style='left: 177px; top: 316px; display: none; max-width: 400px;'>";
+						echo "<div id='boxtutor-".$res['id']."' class='tutorbox' style='left: 177px; top: 316px; display: none; max-width: 300px;'>";
 						echo "<div>".$res['name']."</div>";
 						echo "<div class='hours'><label>Tutoring Hours:</label>";
 						$result2=mysql_query("SELECT daytime FROM schedule WHERE id = '".$res['id']."'");
@@ -120,6 +120,8 @@
 				if($which!=$last) {
 					if(count($exploded)>1)
 						echo "<br>".$which."<br>";
+					else
+						echo "<br>";
 					$last=$which;
 				}
 				else {
