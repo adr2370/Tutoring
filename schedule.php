@@ -115,16 +115,18 @@
 			$last="";
 			for($i=0;$i<count($allClasses);$i++) {
 				$exploded=explode(' ',$allClasses[$i]);
-				$which=$exploded[0];
+				$which="";
+				if(count($exploded)<2) continue;
+				for($j=0;$j<count($exploded)-1;$j++) $which=$which.$exploded[$j]." ";
 				if($which!=$last) {
-					echo $which."<br>";
+					echo "<br>"$which."<br>";
 					$last=$which;
 				}
 				else {
 					echo ", ";
 				}
 				?>
-				<a href="#" class="'<?php echo preg_replace("/[^A-Za-z0-9]/", '', $allClasses[$i]); ?>'" onmouseover="highlight('<?php echo preg_replace("/[^A-Za-z0-9]/", '', $allClasses[$i]); ?>')" onmouseout="unhighlight('<?php echo preg_replace("/[^A-Za-z0-9]/", '', $allClasses[$i]); ?>')" onclick="return locklight('<?php echo preg_replace("/[^A-Za-z0-9]/", '', $allClasses[$i]); ?>')"><?php echo $exploded[1]; ?></a><?php } ?>
+				<a href="#" class="'<?php echo preg_replace("/[^A-Za-z0-9]/", '', $allClasses[$i]); ?>'" onmouseover="highlight('<?php echo preg_replace("/[^A-Za-z0-9]/", '', $allClasses[$i]); ?>')" onmouseout="unhighlight('<?php echo preg_replace("/[^A-Za-z0-9]/", '', $allClasses[$i]); ?>')" onclick="return locklight('<?php echo preg_replace("/[^A-Za-z0-9]/", '', $allClasses[$i]); ?>')"><?php echo $exploded[count($exploded)-1]; ?></a><?php } ?>
 	</div>
 </div>
   </div>
