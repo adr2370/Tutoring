@@ -116,7 +116,8 @@
 			for($i=0;$i<count($allClasses);$i++) {
 				$exploded=explode(' ',$allClasses[$i]);
 				$which="";
-				for($j=0;$j<count($exploded)-1;$j++) $which=$which.$exploded[$j]." ";
+				for($j=0;$j<count($exploded)-1;$j++) $which.=$exploded[$j]." ";
+				$which=$exploded[0];
 				if($which!=$last) {
 					echo "<br>"$which."<br>";
 					$last=$which;
