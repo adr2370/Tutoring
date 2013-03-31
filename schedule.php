@@ -67,7 +67,7 @@
 							}
 						}
 						echo "'>".$res['name']."</div>";
-						echo "<div id='boxtutor-".$res['id']."' class='tutorbox' style='left: 177px; top: 316px; display: none;'>";
+						echo "<div id='boxtutor-".$res['id']."' class='tutorbox' style='left: 177px; top: 316px; display: none; max-width: 400px;'>";
 						echo "<div>".$res['name']."</div>";
 						echo "<div class='hours'><label>Tutoring Hours:</label>";
 						$result2=mysql_query("SELECT daytime FROM schedule WHERE id = '".$res['id']."'");
@@ -100,6 +100,8 @@
 </div>
 <div style="float: left; max-width: 18%; padding-left: 2%; padding-top: 70px; line-height: 1.75em;width: 20%;position: absolute;right: 0%;">
 	<div class="small" style="font-family: none;"><?php
+			/*
+			//For counting
 			for($i=0;$i<count($allClasses);$i++) {
 				$num=intval($classCounts[$allClasses[$i]]);
 				$num/=2;
@@ -108,7 +110,8 @@
 				for($j=0;$j<2-$len;$j++) $num="0".$num;
 				$allClasses[$i]=$num." ".$allClasses[$i];
 			}
-			rsort($allClasses);
+			rsort($allClasses);*/
+			sort($allClasses);
 			for($i=0;$i<count($allClasses);$i++) {
 				if($i>0) echo "<br>";
 				?>
