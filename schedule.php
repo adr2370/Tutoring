@@ -34,6 +34,7 @@
 		
 		$counter=111;
 		$allClasses=array();
+		$classCounts=array();
 		$days=array("Monday","Tuesday","Wednesday","Thursday","Friday");
 		$actualTime=array("10am-11am","11am-12pm","12pm-1pm","1pm-2pm","2pm-3pm","3pm-4pm","4pm-5pm","5pm-6pm");
 		for($j=0;$j<count($actualTime);$j++) {
@@ -57,8 +58,9 @@
 								for($c=0;$c<count($classes);$c++) {
 									if(!in_array($classes[$c],$allClasses)) {
 										array_push($allClasses,$classes[$c]);
+										$classCounts[$classes[$c]]=0;
 									}
-									
+									$classCounts[$classes[$c]]++;
 									echo " ".preg_replace("/[^A-Za-z0-9]/", '', $classes[$c])."_1";
 								}
 							}
@@ -100,7 +102,7 @@
 			for($i=0;$i<count($allClasses);$i++) {
 				if($i>0) echo "<br>";
 				?>
-				<a href="#" class="'<?php echo preg_replace("/[^A-Za-z0-9]/", '', $allClasses[$i]); ?>'" onmouseover="highlight('<?php echo preg_replace("/[^A-Za-z0-9]/", '', $allClasses[$i]); ?>')" onmouseout="unhighlight('<?php echo preg_replace("/[^A-Za-z0-9]/", '', $allClasses[$i]); ?>')" onclick="return locklight('<?php echo preg_replace("/[^A-Za-z0-9]/", '', $allClasses[$i]); ?>')"><?php echo $allClasses[$i]; ?></a><?php } ?>
+				<a href="#" class="'<?php echo preg_replace("/[^A-Za-z0-9]/", '', $allClasses[$i]); ?>'" onmouseover="highlight('<?php echo preg_replace("/[^A-Za-z0-9]/", '', $allClasses[$i]); ?>')" onmouseout="unhighlight('<?php echo preg_replace("/[^A-Za-z0-9]/", '', $allClasses[$i]); ?>')" onclick="return locklight('<?php echo preg_replace("/[^A-Za-z0-9]/", '', $allClasses[$i]); ?>')"><?php echo $allClasses[$i]." ".$classCounts[$allClasses[$i]]; ?></a><?php } ?>
 	</div>
 </div>
   </div>
