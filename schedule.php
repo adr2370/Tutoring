@@ -99,7 +99,7 @@
 </table>
 </div>
 <div style="float: left; max-width: 18%; padding-left: 2%; padding-top: 70px; line-height: 1.75em;width: 20%;position: absolute;right: 0%;">
-	<div class="small" style="font-family: none;"><?php
+	<div class="small" style="font-family: none;position: fixed;width: 20%;right: 0px;top: 10%;"><?php
 			/*
 			//For counting
 			for($i=0;$i<count($allClasses);$i++) {
