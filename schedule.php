@@ -57,6 +57,7 @@
 								$classes=explode(", ",$res2['classes']);
 								for($c=0;$c<count($classes);$c++) {
 									if(strlen($classes[$c])<=0) continue;
+									$classes[$c]=strtoupper($classes[$c]);
 									if(!in_array($classes[$c],$allClasses)) {
 										array_push($allClasses,$classes[$c]);
 										$classCounts[$classes[$c]]=0;
@@ -111,9 +112,6 @@
 				$allClasses[$i]=$num." ".$allClasses[$i];
 			}
 			rsort($allClasses);*/
-			for($i=0;$i<count($allClasses);$i++) {
-				$allClasses[$i]=strtoupper($allClasses[$i]);
-			}
 			sort($allClasses);
 			$last="";
 			for($i=0;$i<count($allClasses);$i++) {
