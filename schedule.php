@@ -111,6 +111,9 @@
 				$allClasses[$i]=$num." ".$allClasses[$i];
 			}
 			rsort($allClasses);*/
+			for($i=0;$i<count($allClasses);$i++) {
+				$allClasses[$i]=strtoupper($allClasses[$i]);
+			}
 			sort($allClasses);
 			$last="";
 			for($i=0;$i<count($allClasses);$i++) {
