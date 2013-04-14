@@ -96,9 +96,8 @@
 						echo "</div>";
 					}
 				}
-				echo "</td>";
-				
 				array_push($theseC,$theseClasses);
+				print_r($theseC);
 				echo "</td>";
 			}
 			echo "</tr>";
