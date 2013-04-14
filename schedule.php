@@ -42,6 +42,7 @@
 			for($i=0;$i<count($days);$i++) {
 				echo "<td class='slot pcell' id='slot-0-1-11'>";
 				$daytime=$days[$i]." ".$actualTime[$j];
+				$theseClasses=array();
 				$result=mysql_query("SELECT id,name FROM schedule WHERE daytime = '".$daytime."'");
 				if(mysql_num_rows($result)>0)
 				{
@@ -61,6 +62,9 @@
 									if(!in_array($classes[$c],$allClasses)) {
 										array_push($allClasses,$classes[$c]);
 										$classCounts[$classes[$c]]=0;
+									}
+									if(!in_array($classes[$c],$theseClasses)) {
+										array_push($theseClasses,$classes[$c]);
 									}
 									$classCounts[$classes[$c]]++;
 									echo " ".preg_replace("/[^A-Za-z0-9]/", '', $classes[$c])."_1";
@@ -90,6 +94,24 @@
 						echo "<br>";
 						echo "</div>";
 					}
+				}
+				sort($theseClasses);
+				$last="";
+				for($i=0;$i<count($theseClasses);$i++) {
+					$exploded=explode(' ',$theseClasses[$i]);
+					$which="";
+					for($j=0;$j<count($exploded)-1;$j++) $which=$which.$exploded[$j]." ";
+					if($which!=$last) {
+						if(count($exploded)>1)
+							echo "<br>".$which."<br>";
+						else
+							echo "<br>";
+						$last=$which;
+					}
+					else {
+						echo ", ";
+					}
+					echo $exploded[count($exploded)-1];
 				}
 				echo "</td>";
 			}
