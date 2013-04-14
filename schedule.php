@@ -98,10 +98,10 @@
 				echo "<div>";
 				sort($theseClasses);
 				$last="";
-				for($i=0;$i<count($theseClasses);$i++) {
-					$exploded=explode(' ',$theseClasses[$i]);
+				for($a=0;$a<count($theseClasses);$a++) {
+					$exploded=explode(' ',$theseClasses[$a]);
 					$which="";
-					for($k=0;$k<count($exploded)-1;$k++) $which=$which.$exploded[$k]." ";
+					for($b=0;$b<count($exploded)-1;$b++) $which=$which.$exploded[$b]." ";
 					if($which!=$last) {
 						if(count($exploded)>1)
 							echo "<br>".$which."<br>";
