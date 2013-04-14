@@ -13,7 +13,7 @@
   <div id="content">
     <div id="container">
 <div style="float: left; width: 80%; text-align: center; margin-bottom: 30px;">
-<h1>TBP Tutoring</h1>
+<h1>TBP/UPE Tutoring</h1>
 <table class="tutoring" id="cory_schedule">
 	<tbody>
 	<tr>
