@@ -39,6 +39,7 @@
 		$actualTime=array("10am-11am","11am-12pm","12pm-1pm","1pm-2pm","2pm-3pm","3pm-4pm","4pm-5pm","5pm-6pm");
 		for($j=0;$j<count($actualTime);$j++) {
 			echo "<tr><td class='time'>".$actualTime[$j]."</td>";
+			$theseC=array();
 			for($i=0;$i<count($days);$i++) {
 				echo "<td class='slot pcell' id='slot-0-1-11'>";
 				$daytime=$days[$i]." ".$actualTime[$j];
@@ -95,7 +96,17 @@
 						echo "</div>";
 					}
 				}
-				echo "<div>";
+				echo "</td>";
+				
+				array_push($theseC,$theseClasses);
+				echo "</td>";
+			}
+			echo "</tr>";
+			echo "<tr><td class='time'>".$actualTime[$j]."</td>";
+			$theseC=array();
+			for($i=0;$i<count($days);$i++) {
+				echo "<td>";
+				$theseClasses=$theseC[$i];
 				sort($theseClasses);
 				$last="";
 				for($a=0;$a<count($theseClasses);$a++) {
@@ -114,7 +125,6 @@
 					}
 					echo $exploded[count($exploded)-1];
 				}
-				echo "</div>";
 				echo "</td>";
 			}
 			echo "</tr>";
