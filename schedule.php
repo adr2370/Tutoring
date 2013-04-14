@@ -95,6 +95,7 @@
 						echo "</div>";
 					}
 				}
+				echo "<div>";
 				sort($theseClasses);
 				$last="";
 				for($i=0;$i<count($theseClasses);$i++) {
@@ -113,6 +114,7 @@
 					}
 					echo $exploded[count($exploded)-1];
 				}
+				echo "</div>";
 				echo "</td>";
 			}
 			echo "</tr>";
