@@ -100,7 +100,7 @@
 				echo "</td>";
 			}
 			echo "</tr>";
-			echo "<tr><td class='time'>".$actualTime[$j]."</td>";
+			echo "<tr><td class='time'></td>";
 			for($i=0;$i<count($days);$i++) {
 				echo "<td>";
 				$theseClasses=$theseC[$i];
@@ -111,7 +111,9 @@
 					$which="";
 					for($b=0;$b<count($exploded)-1;$b++) $which=$which.$exploded[$b]." ";
 					if($which!=$last) {
-						if(count($exploded)>1)
+						if($a==0) {
+							echo $which."<br>";
+						} else if(count($exploded)>1)
 							echo "<br>".$which."<br>";
 						else
 							echo "<br>";
