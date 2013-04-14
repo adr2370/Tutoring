@@ -97,12 +97,10 @@
 					}
 				}
 				array_push($theseC,$theseClasses);
-				print_r($theseC);
 				echo "</td>";
 			}
 			echo "</tr>";
 			echo "<tr><td class='time'>".$actualTime[$j]."</td>";
-			$theseC=array();
 			for($i=0;$i<count($days);$i++) {
 				echo "<td>";
 				$theseClasses=$theseC[$i];
