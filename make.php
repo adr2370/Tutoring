@@ -8,9 +8,9 @@ mysql_select_db($db,$connection);
 mysql_query("DELETE FROM schedule");
 $query="SELECT * FROM tutor";
 $result=mysql_query($query);
-$days=array("Monday","Tuesday","Wednesday","Thursday","Friday");
-$times=array("10am-12pm","11am-1pm","12pm-2pm","1pm-3pm","2pm-4pm","3pm-5pm","4pm-6pm");
-$actualTime=array("10am-11am","11am-12pm","12pm-1pm","1pm-2pm","2pm-3pm","3pm-4pm","4pm-5pm","5pm-6pm");
+$days=array("monday","tuesday","wednesday","thursday","friday");
+$times=array("10am-12pm","11am-1pm","12pm-2pm","1pm-3pm","2pm-4pm","3pm-5pm");
+$actualTime=array("10am-11am","11am-12pm","12pm-1pm","1pm-2pm","2pm-3pm","3pm-4pm","4pm-5pm");
 $bottomLimit=3;
 if(mysql_num_rows($result)>0)
 {
