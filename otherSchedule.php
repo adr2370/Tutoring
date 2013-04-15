@@ -100,6 +100,33 @@
 				echo "</td>";
 			}
 			echo "</tr>";
+			echo "<tr><td class='time'></td>";
+			for($i=0;$i<count($days);$i++) {
+				echo "<td>";
+				$theseClasses=$theseC[$i];
+				sort($theseClasses);
+				$last="";
+				for($a=0;$a<count($theseClasses);$a++) {
+					$exploded=explode(' ',$theseClasses[$a]);
+					$which="";
+					for($b=0;$b<count($exploded)-1;$b++) $which=$which.$exploded[$b]." ";
+					if($which!=$last) {
+						if($a==0) {
+							echo $which."<br>";
+						} else if(count($exploded)>1)
+							echo "<br>".$which."<br>";
+						else
+							echo "<br>";
+						$last=$which;
+					}
+					else {
+						echo ", ";
+					}
+					echo $exploded[count($exploded)-1];
+				}
+				echo "</td>";
+			}
+			echo "</tr>";
 		}
 	?>
 </tbody>
