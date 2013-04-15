@@ -11,7 +11,8 @@ $result=mysql_query($query);
 $days=array("monday","tuesday","wednesday","thursday","friday");
 $times=array("10am-12pm","11am-1pm","12pm-2pm","1pm-3pm","2pm-4pm","3pm-5pm");
 $actualTime=array("10am-11am","11am-12pm","12pm-1pm","1pm-2pm","2pm-3pm","3pm-4pm","4pm-5pm");
-$bottomLimit=6;
+$bottomLimit=4;
+$upperLimit=6;
 if(mysql_num_rows($result)>0)
 {
 	while($res = mysql_fetch_assoc($result))
