@@ -76,6 +76,7 @@ for($pref=2;$pref<=3;$pref++) {
 									$loc=array_search($time,$times);
 									$counts[$dayLoc][$loc]++;
 									$counts[$dayLoc][$loc+1]++;
+									echo $day." ".$actualTime[$loc]." ".$res['name']."<br/>";
 									mysql_query("DELETE FROM schedule WHERE id = '".$res['id']."'");
 									mysql_query("INSERT INTO schedule VALUES('".$day." ".$actualTime[$loc]."','".$res['name']."','".$res['id']."')");
 									mysql_query("INSERT INTO schedule VALUES('".$day." ".$actualTime[$loc+1]."','".$res['name']."','".$res['id']."')");
