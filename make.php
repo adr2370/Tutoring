@@ -19,7 +19,7 @@ if(mysql_num_rows($result)>0)
 		$exploded=explode(' ',$res["daytime1"]);
 		$day=$exploded[0];
 		$time=$exploded[1];
-		$loc=array_search($time,$times);
+		$loc=array_search(strtolower($time),$times);
 		mysql_query("INSERT INTO schedule VALUES('".$day." ".$actualTime[$loc]."','".$res['name']."','".$res['id']."')");
 		mysql_query("INSERT INTO schedule VALUES('".$day." ".$actualTime[$loc+1]."','".$res['name']."','".$res['id']."')");
 	}
@@ -63,8 +63,8 @@ for($pref=2;$pref<=3;$pref++) {
 								$exploded=explode(" ",$res['daytime1']);
 								$day=$exploded[0];
 								$time=$exploded[1];
-								$dayLoc=array_search($day,$days);
-								$loc=array_search($time,$times);
+								$dayLoc=array_search(strtolower($day),$days);
+								$loc=array_search(strtolower($time),$times);
 								if($counts[$dayLoc][$loc]>$counts[$i][$j]&&$counts[$dayLoc][$loc+1]>$counts[$i][$j]) {
 									//switch person over
 									$counts[$dayLoc][$loc]--;
@@ -72,8 +72,8 @@ for($pref=2;$pref<=3;$pref++) {
 									$exploded=explode(" ",$res['daytime'.$pref]);
 									$day=$exploded[0];
 									$time=$exploded[1];
-									$dayLoc=array_search($day,$days);
-									$loc=array_search($time,$times);
+									$dayLoc=array_search(strtolower($day),$days);
+									$loc=array_search(strtolower($time),$times);
 									$counts[$dayLoc][$loc]++;
 									$counts[$dayLoc][$loc+1]++;
 									echo $day." ".$actualTime[$loc]." ".$res['name']."<br/>";
