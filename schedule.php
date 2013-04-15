@@ -16,7 +16,7 @@ div.person {
 <div id="wrapper">
   <div id="content">
     <div id="container">
-<div style="float: left; width: 80%; text-align: center; margin-bottom: 30px;">
+<div style="float: left; width: 80%; text-align: center; margin-bottom: 150px;">
 <h1>TBP/UPE Tutoring</h1>
 <table class="tutoring" id="cory_schedule">
 	<tbody>
