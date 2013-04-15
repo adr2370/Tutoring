@@ -50,7 +50,7 @@
 					while($res = mysql_fetch_assoc($result))
 					{
 						$counter++;
-						echo "<div class='person";
+						echo "<div style='cursor: auto;' class='person";
 						$result2=mysql_query("SELECT classes FROM tutor WHERE id = '".$res['id']."'");
 						if(mysql_num_rows($result2)>0)
 						{
