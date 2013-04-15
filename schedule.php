@@ -6,7 +6,11 @@
   <link href="./Eta Kappa Nu (HKN), Mu Chapter_files/css" rel="stylesheet" type="text/css">
   <script src="./Eta Kappa Nu (HKN), Mu Chapter_files/tutor-a971345e76b4ad2f8951bcb4126eea10.js" type="text/javascript"></script>
   <link href="./Eta Kappa Nu (HKN), Mu Chapter_files/tutor-dcc8d702ec4e6c8cd9e53cc05f848566.css" media="screen" rel="stylesheet" type="text/css">
-
+<style>
+div.person {
+	font-size: 13px;
+}
+</style>
 </head>
 <body>
 <div id="wrapper">
@@ -106,7 +110,7 @@
 </table>
 </div>
 <div style="float: left; max-width: 18%; padding-left: 2%; padding-top: 70px; line-height: 1.75em;width: 20%;position: absolute;right: 0%;">
-	<div class="small" style="font-family: none;position: fixed;width: 20%;right: 10px;top: 50px;"><?php
+	<div class="small" style="font-family: none;position: fixed;width: 20%;right: 10px;top: 50px;font-size:13px;"><?php
 			/*
 			//For counting
 			for($i=0;$i<count($allClasses);$i++) {
