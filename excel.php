@@ -123,6 +123,17 @@
 				}
 				echo "</tr>";
 			}
+			echo "<tr><td class='time'>Other</td>";
+			for($i=0;$i<count($days);$i++) {
+				echo "<td>";
+				$theseClasses=$theseC[$i];
+				sort($theseClasses);
+				for($a=0;$a<count($theseClasses);$a++) {
+					echo $theseClasses[$a]." ";
+				}
+				echo "</td>";
+			}
+			echo "</tr>";
 		}
 	?>
 </tbody>
