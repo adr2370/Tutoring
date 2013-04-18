@@ -101,13 +101,13 @@
 				echo "</td>";
 			}
 			echo "</tr>";
-			for($j=0;$j<count($types);$j++) {
-				echo "<tr><td class='time'>".$types[$j]."</td>";
+			for($c=0;$c<count($types);$c++) {
+				echo "<tr><td class='time'>".$types[$c]."</td>";
 				for($i=0;$i<count($days);$i++) {
 					echo "<td>";
 					$theseClasses=$theseC[$i];
 					sort($theseClasses);
-					$thisType=$types[$j];
+					$thisType=$types[$c];
 					for($a=0;$a<count($theseClasses);$a++) {
 						$exploded=explode(' ',$theseClasses[$a]);
 						$which="";
@@ -123,7 +123,6 @@
 				}
 				echo "</tr>";
 			}
-			
 		}
 	?>
 </tbody>
