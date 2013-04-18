@@ -113,7 +113,7 @@
 						$which="";
 						for($b=0;$b<count($exploded)-1;$b++) $which=$which.$exploded[$b]." ";
 						if($which==$thisType." ") {
-							echo $exploded[count($exploded)-1];
+							echo $exploded[count($exploded)-1]." ";
 							array_splice($theseClasses, $a, 1);
 							$a--;
 						}
